@@ -15,9 +15,17 @@
   },
   "license": "MIT",
   "author": "Reginald Mabanta",
-  "main": "index.js",
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs"
+    }
+  },
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "build": "tsc",
+    "build": "tsup src/index.ts --dts --format cjs,esm",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "format:check": "prettier --check \"src/**/*.ts\"",
     "lint": "eslint 'src/**/*.ts'",
@@ -34,6 +42,7 @@
     "prettier": "^3.6.2",
     "prettier-plugin-organize-imports": "^4.2.0",
     "prettier-plugin-packagejson": "^2.5.19",
+    "tsup": "^8.5.0",
     "typescript": "^5.9.2",
     "typescript-eslint": "^8.40.0"
   }
