@@ -1,0 +1,29 @@
+{
+  "name": "node-package-starter",
+  "version": "1.0.0",
+  "description": "Node package starter kit",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
+    "format:check": "prettier --check \"src/**/*.ts\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/egiev/node-package-starter.git"
+  },
+  "keywords": [
+    "node"
+  ],
+  "author": "Reginald Mabanta",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/egiev/node-package-starter/issues"
+  },
+  "homepage": "https://github.com/egiev/node-package-starter#readme",
+  "devDependencies": {
+    "@types/node": "^24.3.0",
+    "prettier": "^3.6.2",
+    "typescript": "^5.9.2"
+  }
+}
