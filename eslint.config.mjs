@@ -1,7 +1,7 @@
-import globals from 'globals';
 import pluginJs from '@eslint/js';
-import tseslint from 'typescript-eslint';
 import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended';
+import globals from 'globals';
+import tseslint from 'typescript-eslint';
 
 export default [
   { languageOptions: { globals: { ...globals.browser, ...globals.node } } },
@@ -11,7 +11,9 @@ export default [
   {
     files: ['src/**/*.ts'],
     rules: {
-      'no-console': 'warn',
+      'no-console': 'error',
+      '@typescript-eslint/no-empty-function': 'error',
+      '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
     },
   },
 ];
